@@ -4,6 +4,7 @@ import java.awt.Image;
 import javax.swing.JFrame;
 import javax.swing.JLayeredPane;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import javax.swing.JButton;
 import java.awt.Color;
 import java.awt.Font;
@@ -13,10 +14,16 @@ import javax.swing.UIManager;
 import java.util.*;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
+import javax.swing.AbstractAction;
+import javax.swing.Action;
 
 public class DidcountKnightGui {
 
 	private JFrame frame;
+	private JPanel p;
+	private JButton b1;
+	private JLabel lab;
+	private final Action action = new SwingAction();
 
 	/**
 	 * Launch the application.
@@ -51,14 +58,42 @@ public class DidcountKnightGui {
 		frame.getContentPane().setLayout(null);
 		
 		JLayeredPane layeredPane = new JLayeredPane();
+		layeredPane.setBackground(Color.DARK_GRAY);
 		layeredPane.setBounds(0, 277, 450, -274);
 		frame.getContentPane().add(layeredPane);
+		layeredPane.setLayout(null);
 		
 		JButton btnNewButton = new JButton("North");
 		btnNewButton.setForeground(new Color(0, 0, 0));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				NorthDirection();
+				/*
+				frame = new JFrame("North");
+				frame.setVisible(true);
+				frame.setSize(600,400);
+				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+				frame.getContentPane().setLayout(null);
+				
+				p = new JPanel();
+				p.setBackground(Color.YELLOW);
+				
+				b1 = new JButton("Test");
+				b1.setForeground(new Color(0, 0, 0));
+				b1.setBounds(168, 45, 117, 29);
+				b1.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						NorthDirection();
+						
+					}
+				});
+				lab = new JLabel("This is a test label");
+				
+				p.add(b1);
+				p.add(lab);
+				
+				frame.add(p);
+				*/
 			}
 		});
 		btnNewButton.setFont(new Font("Microsoft Sans Serif", Font.PLAIN, 13));
@@ -620,5 +655,13 @@ public class DidcountKnightGui {
         }
         
         return finalBossDam;
+	}
+	private class SwingAction extends AbstractAction {
+		public SwingAction() {
+			putValue(NAME, "SwingAction");
+			putValue(SHORT_DESCRIPTION, "Some short description");
+		}
+		public void actionPerformed(ActionEvent e) {
+		}
 	}
 	}
