@@ -1,0 +1,630 @@
+/**
+ * Remington Frank
+ * Started: November 1st, 2018
+ * Finished: ???
+ */
+
+import java.util.Scanner;
+import java.util.Random;
+public class GameSelfProject
+{
+    public static void main(String[] args)
+    {
+        System.out.println("*responses in this game are case \n"
+            +"sensitive. So if the program asks for a capital 'Y', \n"
+            +"then type a capital 'Y'. \n \n");
+        
+        System.out.println("Greetings, traveler! Welcome to the land of");
+        System.out.println("the discount knights. Do you think you have");
+        System.out.println("what it takes to be one of us?");
+        
+        Scanner reader = new Scanner(System.in);
+        System.out.println("Well, do you [Y,N]: ");
+        String response = reader.nextLine();
+        
+        if(response.equals("Y"))
+        {
+            System.out.println("Excellent! Let's begin your journey.");
+            
+            System.out.println("\nNow, what kind of fighter are you?");
+            
+            Scanner newReader = new Scanner(System.in);
+            System.out.println("You can choose to be a warrior, mage, or archer: ");
+            String responseTwo = newReader.nextLine();
+ 
+            if(responseTwo.equals("warrior"))
+            {
+                System.out.println("You must be really strong!");
+                System.out.println("Let's look at your items then...");
+                //work on items system
+                System.out.println("Well then, Warrior, what is your name? ");
+                String name = newReader.nextLine();
+                
+                System.out.println(name+ "...that's an interesting name. Welcome to your adventure! \n");
+            }
+            
+            if(responseTwo.equals("mage"))
+            {
+                System.out.println("Woah! I didn't know you knew magic.");
+                System.out.println("Let's look at your items then...");
+                //work on items system
+                System.out.println("So then, Mage, what is your name? ");
+                String name = newReader.nextLine();
+                System.out.println(name+ ", that's pretty lame. Well, let's get on with your adventure. \n");
+                
+            }
+            
+            if(responseTwo.equals("archer"))
+            {
+                System.out.println("You'll be perfect for ranged attacks!");
+                System.out.println("Let's look at your items then...");
+                //work on items system
+                System.out.println("Well then, Archer, what is your name? ");
+                String name = newReader.nextLine();
+                
+                System.out.println(name+ "...Epic! That's like my name. What's that?");
+                System.out.println("You don't know my name? Oh, it's Gunnar Hamundarson, it's celtic.");
+                System.out.println("Anyhow, let's begin your actual adventure. \n");
+                //write a public method that diverts the individual classes to be back on one track
+            }
+            
+            
+            System.out.println("To be one of the knights of the discount table,\n"
+                        + "you'll have to prove your effectiveness (with a low budget of course). \n"
+                        +"To prove your worth, you'll have to complete three tasks: \n");
+       
+            System.out.println("(1): Fight the ogre");
+            System.out.println("(2): Defeat the White Knight of 4Chan");
+            System.out.println("(3): Just return back here when you're done \n");
+       
+            System.out.println("Now, get out there and good luck! \n");
+            
+            Scanner viewer = new Scanner(System.in);
+            System.out.println("Which direction would you like to travel [N,E,W,S]: ");
+            String directionOne = viewer.nextLine();
+       
+            if(directionOne.equals("N"))
+            {
+                NorthDirection();
+            }
+       
+            if(directionOne.equals("E"))
+            {
+                EastDirection();
+            }
+      
+            if(directionOne.equals("W"))
+            {
+                WestDirection();
+            }
+      
+            if(directionOne.equals("S"))
+            {
+               SouthDirection();
+            } 
+        }
+        if(response.equals("N"))
+        {
+            System.out.println("What a shame. You could have been such a great ally.");
+        } 
+    }
+    
+    
+    private static void WestDirection()
+    {
+      System.out.println("Welcome to the empire of 4Chan... \n");
+          
+      Scanner viewerTwo = new Scanner(System.in);
+      System.out.println("Would you like to enter[Y,N]? ");
+      String enters4Chan = viewerTwo.nextLine();
+          
+      if(enters4Chan.equals("Y") || enters4Chan.equals("N"))
+      {
+         System.out.println("So you enter the large city. \n"
+            + "It is filled with dweebs, normies, and people who sleep \n"
+            +"with body pillows. \n");
+                    
+         System.out.println("You make your way to the castle, barge in, and demand \n"
+             +"to battle the knights.\n");
+         System.out.println("Out comes a massive individual covered head to toe \n"
+              +"in cardboard and metal objects. \"Prepare to die!\" he shouts.\n"
+              +"He has first attack and deals a whopping 50 damage. \n"
+              +"You realize you can't beat him by fighting so you decide \n"
+              +"to play the mental game. \n \n");
+                            
+         System.out.println("What do you say to him [A,B,C,D]: ");
+         String responseToKnight = viewerTwo.nextLine();
+         
+            if(responseToKnight.equals("A"))
+            {
+                System.out.println("'Listen hear you big meanie,' you shout, 'knock this crud off! \n \n");
+                System.out.println("The knight giggles and kills you in one swift blow \n \n"
+                    +"Game Over");
+            }
+            
+            if(responseToKnight.equals("B"))
+            {
+                System.out.println("'Uuuuuuhhhhh,' you say in confusion, 'hi?' \n \n");
+                System.out.println("The knight scoffs and uses his sword to kill you \n"
+                    +"in a single blow. \n \n"
+                    +"Game Over");
+            }
+            
+            if(responseToKnight.equals("C"))
+            {
+                System.out.println("'No U,' you shout at him. He is stunned and recedes backwards. \n");
+                System.out.println("What do you say to him now [A,B]? ");
+                String responseToKnightTwo = viewerTwo.nextLine();
+                    if(responseToKnightTwo.equals("A"))
+                    {
+                        System.out.println("'Nerd,' you call him and his self esteem is hurt. \n"
+                            +"He attempts to say something back but hesitates and then decides to leave. \n \n");
+                            
+                        System.out.println(" ̶(̶2̶)̶:̶ ̶D̶e̶f̶e̶a̶t̶ ̶t̶h̶e̶ ̶W̶h̶i̶t̶e̶ ̶K̶n̶i̶g̶h̶t̶ ̶o̶f̶ ̶4̶C̶h̶a̶n̶ \n \n");
+                        
+                        System.out.println("Have you already completed the quest to the North [Y,N]? ");
+                        String ifTheyHaveGoneNorthOrNot = viewerTwo.nextLine();
+                        
+                        if(ifTheyHaveGoneNorthOrNot.equals("Y"))
+                        {
+                            System.out.println("Which direction do you go now [E,S]? ");
+                            String directionAfterNorthAndWest = viewerTwo.nextLine();
+                            
+                                if(directionAfterNorthAndWest.equals("E"))
+                                {
+                                    System.out.println("You fall over a cliff and die. \n \n"
+                                        +"Game Over");
+                                }
+                                else
+                                {
+                                    int discountKnightHealth = 200;
+                                    int playerHealth = 200;
+                                    
+                                    System.out.println("\n So, you made it to the end. Well, now it's \n"
+                                        +"time for your final fight. It will be against the greatest knight \n"
+                                           +"in the land...me. \n \n");
+                                           
+                                    System.out.println("Begin fight! \n \n");
+                                    
+                                    while(playerHealth > 0 && discountKnightHealth > 0)
+                                    {
+                                        System.out.println("Do you choose to attack or block [A,B]? ");
+                                        String attackOrBlock = viewerTwo.nextLine();
+                                        
+                                        if(attackOrBlock.equals("A"))
+                                        {
+                                            System.out.println("You deal 50 damage. Your opponent's health is now " 
+                                                + (discountKnightHealth - 50) + "\n");
+                                                discountKnightHealth = (discountKnightHealth - 50);
+                                                
+                                            System.out.println("It is now their turn. \n");
+                                            
+                                            finalBossDamage();
+                                            
+                                             if(finalBossDamage() == 50)
+                                             {
+                                                 System.out.println("Your health is now: " + (playerHealth-50));
+                                                 playerHealth = (playerHealth - 50);
+                                             }
+                                             else
+                                             {
+                                                 System.out.println("Your opponent deals no damage."
+                                                    +"Your health is now: " +playerHealth);
+                                             }
+                                        }
+                                        
+                                        if(attackOrBlock.equals("B"))
+                                        {
+                                            System.out.println("You get no damage dealt to you. \n"
+                                                +"Your health is now: " + playerHealth);
+                                        }
+                                    }
+                                    
+                                    if(playerHealth > 0 && discountKnightHealth <= 0)
+                                    {
+                                        System.out.println("Oh my goodness! Have your mom get the camera \n"
+                                            +"because you just won. \n \n"
+                                            +"Welcome to the Knights of the Discount Table... \n \n"
+                                            +"End");
+                                    }
+                                    
+                                    if(playerHealth <= 0 && discountKnightHealth > 0)
+                                    {
+                                        System.out.println("You have been slain. \n"
+                                            +"You fought a hard battle and you were a great fighter. \n \n"
+                                            +"Game Over");
+                                    }
+                                }
+                        }
+                        
+                        if(ifTheyHaveGoneNorthOrNot.equals("N"))
+                        {
+                            System.out.println("Which direction do you go now [N,E,S]? ");
+                            String directionAfterWest = viewerTwo.nextLine();
+                            
+                            if(directionAfterWest.equals("N"))
+                            {
+                                NorthDirection();
+                            }
+                        
+                            if(directionAfterWest.equals("E"))
+                            {
+                                EastDirection();
+                            }
+                        
+                            if(directionAfterWest.equals("S"))
+                            {
+                                SouthDirection();
+                            }
+                        }
+                        
+                    }
+                    
+                    if(responseToKnightTwo.equals("B"))
+                    {
+                        System.out.println("'You look like you eat Burger King foot lettuce,' you say. \n"
+                            +"You think you have him beat but then he smiles and says... \n \n"
+                            +"'What the f#@$ did you just f$#@%^*! say about me, you little b$%#@?\n"
+                            +"I'll have you know I graduated top of my class in the Navy Seals, \n"
+                            +"and I'be been involved in numerous secret raids on Al-Qaeda, and"
+                            +"I have over 300 confirmed kills...\n \n");
+                        System.out.println("He continues to recite it word for word. \n \n");
+                        System.out.println("...You're f$#@!%& dead, kiddo. \n \n");
+                        System.out.println("Immediately you combust and die. \n \n");
+                        System.out.println("Game Over");
+                        
+                    }
+            }
+            
+            if(responseToKnight.equals("D"))
+            {
+                System.out.println("You try to criticize his style but he knows he's \n"
+                    +"the flyest boy there is and he yeets you to death. \n \n");
+                System.out.println("Game Over");
+            }
+                //continue by making only one of those letters be an acceptable response
+                //the others just kill you
+      }
+    }
+    
+    private static void NorthDirection()
+    {
+        Scanner viewerThree = new Scanner(System.in);
+       System.out.println("You come across a bridge. Do you cross[Y,N]? ");
+                String bridgeCross = viewerThree.nextLine();
+                
+                if(bridgeCross.equals("Y"))
+                {
+                    Random bridgeRand = new Random();
+                    int bridgeRandomNumber = bridgeRand.nextInt(11);
+                    
+                    if(bridgeRandomNumber == 1)
+                    {
+                        System.out.println("The first board you step on breaks and snaps\n"
+                            +"You plummet to your death. \n"
+                               +"\nGame Over");
+                    }
+                    if(bridgeRandomNumber != 1)
+                    {
+                        System.out.println("You make it safely across the bridge and \n"
+                            +"enter a swamp. Immediately, the ground under you starts \n"
+                            +"rumbling. \n \n");
+                        System.out.println("You have enterred the land of the ogre. \n \n");
+                        System.out.println("You have first hit. Do you attack[Y,N]: ");
+                        String attackOgre = viewerThree.nextLine();
+                        int ogreHealth = 100;
+                        if(attackOgre.equals("Y"))
+                        {
+                            ogreHealth -= 10;
+                            while(ogreHealth > 0)
+                            {
+                                System.out.println("The ogre is still alive. Do you attack[Y,N]: ");
+                                String attackOgreTwo = viewerThree.nextLine();
+                                if(attackOgreTwo.equals("Y"))
+                                {
+                                    ogreHealth -= 10;
+                                }
+                                if(attackOgreTwo.equals("N"))
+                                {
+                                    System.out.println("You get mud thrown in your face and die. \n \n");
+                                    System.out.println("Game Over");
+                                    break;
+                                }
+                            }
+                            
+                            if(ogreHealth == 0)
+                            {
+                                System.out.println("\n The ogre is dead... \n \n");
+                                System.out.println("...He didn't even try to fight back... \n \n");
+                                System.out.println("Dude, you did not show knightly morals \n"
+                                    +"by killing an innocent little ogre. For killing, this \n"
+                                    +"beautiful beast, you too will die. \n \n");
+                                System.out.println("Game Over");
+                            }
+                        }
+                        if(attackOgre.equals("N"))
+                        {
+                            System.out.println("\"Brgahgghagrghah,\" says the ogre.\n"
+                                +"I don't speak ogre too well, but I think he's saying \n"
+                                +"that he respects your decision to not hurt him and that \n"
+                                +"he was only looking for some company. Know what, you now get an \n"
+                                +"additional 30 attack points. You're such a cool dude. \n \n");
+                            System.out.println(" ̶(̶1̶)̶-̶F̶i̶g̶h̶t̶-̶t̶h̶e̶-̶o̶g̶r̶e̶-̶ \n \n");
+                            
+                            System.out.println("You make your way back to where you started.");
+                            System.out.println("Have you completed the quest the West already [Y,N]? ");
+                            String ifTheyHaveBeenWestOrNot = viewerThree.nextLine();
+                            
+                            if(ifTheyHaveBeenWestOrNot.equals("N"))
+                            {
+                                System.out.println("Which direction would you like to travel [E,W,S]: ");
+                                String directionAfterNorth = viewerThree.nextLine();
+                
+                                if(directionAfterNorth.equals("E"))
+                                {
+                                    System.out.println("You fall off a cliff and die... \n");
+                                    System.out.println("Game Over");
+                                }
+                            
+                                if(directionAfterNorth.equals("W"))
+                                {
+                                    WestDirection();
+                                }
+                            
+                                if(directionAfterNorth.equals("S"))
+                                {
+                                    System.out.println("Woah! I didn't expect you to come this way yet. \n"
+                                        +"Come back this way later. \n \n");
+                                    
+                                        Scanner readerFifty = new Scanner(System.in);
+                                        System.out.println("So, which direction would you like to go [E,W]? ");
+                                        String directionAfterNorthAndSouth = readerFifty.nextLine();
+                                
+                                        if(directionAfterNorthAndSouth.equals("E"))
+                                        {
+                                            EastDirection();
+                                        }
+                                
+                                        if(directionAfterNorthAndSouth.equals("W"))
+                                        {
+                                            WestDirection();
+                                        }
+                                }
+                            }
+                            
+                            if(ifTheyHaveBeenWestOrNot.equals("Y"))
+                            {
+                                System.out.println("Which direction would you like to travel [E,S]? ");
+                                String directionAfterWestAndNorth = viewerThree.nextLine();
+                                
+                                    if(directionAfterWestAndNorth.equals("E"))
+                                    {
+                                       EastDirection();
+                                    }
+                                    
+                                    if(directionAfterWestAndNorth.equals("S"))
+                                    {
+                                        int discountKnightHealth = 200;
+                                        int playerHealth = 200;
+                                    
+                                        System.out.println("\n So, you made it to the end. Well, now it's \n"
+                                            +"time for your final fight. It will be against the greatest knight \n"
+                                            +"in the land...me. \n \n");
+                                           
+                                            System.out.println("Begin fight! \n \n");
+                                    
+                                            while(playerHealth > 0 && discountKnightHealth > 0)
+                                            {
+                                                System.out.println("Do you choose to attack or block [A,B]? ");
+                                                String attackOrBlock = viewerThree.nextLine();
+                                        
+                                                if(attackOrBlock.equals("A"))
+                                                {
+                                                    System.out.println("You deal 50 damage. Your opponent's health is now " 
+                                                    + (discountKnightHealth - 50) + "\n");
+                                                    discountKnightHealth = (discountKnightHealth - 50);
+                                                
+                                                    System.out.println("It is now their turn. \n");
+                                            
+                                                    finalBossDamage();
+                                            
+                                                    if(finalBossDamage() == 50)
+                                                    {
+                                                        System.out.println("Your health is now: " + (playerHealth-50));
+                                                        playerHealth = (playerHealth - 50);
+                                                    }
+                                                    else
+                                                    {
+                                                        System.out.println("Your opponent deals no damage."
+                                                        +"Your health is now: " +playerHealth);
+                                                    }   
+                                                }
+                                        
+                                                if(attackOrBlock.equals("B"))
+                                                {
+                                                    System.out.println("You get no damage dealt to you. \n"
+                                                    +"Your health is now: " + playerHealth);
+                                                }   
+                                            }
+                                    
+                                            if(playerHealth > 0 && discountKnightHealth <= 0)
+                                            {
+                                                System.out.println("Oh my goodness! Have your mom get the camera \n"
+                                                +"because you just won. \n \n"
+                                                +"Welcome to the Knights of the Discount Table... \n \n"
+                                                +"End");
+                                            }
+                                    
+                                            if(playerHealth <= 0 && discountKnightHealth > 0)
+                                            {
+                                                System.out.println("You have been slain. \n"
+                                                +"You fought a hard battle and you were a great fighter. \n \n"
+                                                +"Game Over");
+                                            }
+                                        
+                                        
+                                        
+                                    }
+                                
+                            }
+                        }
+                    }
+                }
+                if(bridgeCross.equals("N"))
+                {
+                    System.out.println("Seriously man, you're gonna make me go through \n"
+                        +"the hastle to write a story line where you don't want \n"
+                        +"to cross the bridge. Well...too bad, you have to cross the \n"
+                        +"bridge, and the chance of it breaking has been increased to 80% \n");
+                        
+                    Random bridgeRandTwo = new Random();
+                    int bridgeRandomNumberTwo = bridgeRandTwo.nextInt(11);
+                    
+                    if(bridgeRandomNumberTwo <= 8)
+                    {
+                        System.out.println("Ha! You fall through the bridge and die. \n"
+                            +"That's what you get. \n");
+                            
+                        System.out.println("\n Game Over");
+                    }
+                    if(bridgeRandomNumberTwo > 8)
+                    {
+                      System.out.println("You lucky bastard!\n"
+                        +"How did you survive? \n"
+                        +"Well...anyhow, welcome to the layer of the ogre...yada yada yada...\n"
+                        +"Ugh, just fight the damn beast.");
+                        
+                        System.out.println("You have first hit. Do you attack[Y,N]: ");
+                        String attackOgreSecond = viewerThree.nextLine();
+                        int ogreHealth = 100;
+                        if(attackOgreSecond.equals("Y"))
+                        {
+                            ogreHealth -= 10;
+                            while(ogreHealth > 0)
+                            {
+                                System.out.println("The ogre is still alive. Do you attack[Y,N]: ");
+                                String attackOgreTwo = viewerThree.nextLine();
+                                if(attackOgreTwo.equals("Y"))
+                                {
+                                    ogreHealth -= 10;
+                                }
+                                if(attackOgreTwo.equals("N"))
+                                {
+                                    System.out.println("You get mud thrown in your face and die. \n \n");
+                                    System.out.println("Game Over");
+                                    break;
+                                }
+                            }
+                            
+                            if(ogreHealth == 0)
+                            {
+                                System.out.println("\n The ogre is dead... \n \n");
+                                System.out.println("...He didn't even try to fight back... \n \n");
+                                System.out.println("Dude, you did not show knightly morals \n"
+                                    +"by killing an innocent little ogre. For killing, this \n"
+                                    +"beautiful beast, you too will die. \n \n");
+                                System.out.println("Game Over");
+                            }
+                        }
+                        if(attackOgreSecond.equals("N"))
+                        {
+                            System.out.println("\"Brgahgghagrghah,\" says the ogre.\n"
+                                +"I don't speak ogre too well, but I think he's saying \n"
+                                +"that he respects your decision to not hurt him and that \n"
+                                +"he was only looking for some company. Know what, you now get an \n"
+                                +"additional 30 attack points. You're such a cool dude. \n \n");
+                            System.out.println(" ̶(̶1̶)̶-̶F̶i̶g̶h̶t̶-̶t̶h̶e̶-̶o̶g̶r̶e̶-̶ \n \n");
+                            
+                            System.out.println("You make your way back to where you started.");
+                            System.out.println("Which direction would you like to travel [E,W,S]: ");
+                            String directionAfterNorth = viewerThree.nextLine();
+                
+                            if(directionAfterNorth.equals("E"))
+                            {
+                                System.out.println("You fall off a cliff and die... \n");
+                                System.out.println("Game Over");
+                            }
+                            
+                            if(directionAfterNorth.equals("W"))
+                            {
+                                WestDirection();
+                            }
+                            
+                            if(directionAfterNorth.equals("S"))
+                            {
+                                SouthDirection();
+                            }
+                        }
+                    }
+                } 
+    }
+    
+    private static void EastDirection()
+    {
+        System.out.println("You fall off a cliff and die... \n");
+                System.out.println("Game Over");
+    }
+    
+    private static void SouthDirection()
+    {
+        System.out.println("Uuuuhhh...come back this way later.\n");
+                System.out.println("You make your way back to the start.");
+                
+                Scanner viewerFour = new Scanner(System.in);
+                System.out.println("Which direction would you like to go[N,E,W,S]? ");
+                String southDirectionNew = viewerFour.nextLine();
+                
+                if(southDirectionNew.equals("S"))
+                {
+                    System.out.println("Dude, wth. I just told you not \n"
+                        +"to go this way until the end. \n"
+                        +"Welp, if it's the end you want, it's the end you get...\n");
+                        
+                    System.out.println("Game Over");
+                }
+                
+                if(southDirectionNew.equals("N"))
+                {
+                    NorthDirection();
+                }
+            
+                
+                if(southDirectionNew.equals("E"))
+                {
+                    EastDirection();
+                }
+                
+                if(southDirectionNew.equals("W"))
+                {
+                    WestDirection();
+                }
+    }
+    
+    private static int finalBossDamage()
+    {
+        int finalBossDamage = 0;
+        
+        Random randInt = new Random();
+        int num = randInt.nextInt(100) + 1;
+        
+        if(num <= 20 && num >= 1)
+        {
+            System.out.println("Your opponent chose to block for this turn. \n");
+             finalBossDamage = 0;
+        }
+        
+        if(num > 20 && num <= 70)
+        {
+            System.out.println("Your opponent attacks and deals 50 damage. \n");
+                finalBossDamage = 50;
+        }
+        
+        else
+        {
+            System.out.println("Woah! Your opponent attacks and misses. This is your chance. Attack! \n");
+                finalBossDamage = 0;
+        }
+        
+        return finalBossDamage;
+    }
+}
